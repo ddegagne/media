@@ -32,4 +32,23 @@ and
 
 `sudo service sabnzbdplus stop`
 
+## Sonarr PVR Install
+
+Add Sonarr's repository to your software source
+
+`sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys FDA5DFFC`
+`echo "deb http://apt.sonarr.tv/ master main" | sudo tee /etc/apt/sources.list.d/sonarr.list`
+
+Install/Update Sonarr
+
+`sudo apt-get update`
+`sudo apt-get install nzbdrone` 
+
+Start Sonarr
+
+`mono --debug /opt/NzbDrone/NzbDrone.exe`
+
+Open Browser
+
+http://localhost:8989
 

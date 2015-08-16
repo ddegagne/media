@@ -1,8 +1,8 @@
-
+--
 -- Create auth table
 --
 
-use connections;
+use vpn_connections;
 
 CREATE TABLE auth
   (

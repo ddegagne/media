@@ -24,6 +24,36 @@ And that's it. To start the program, just execute:
 
 If you want the program to be started as a service (i.e., in the background on system boot), you will need to edit (as root) the file /etc/default/sabnzbdplus and set the "USER=" to the appropriate setting and the "HOST=" to 0.0.0.0 .
 
+Example conf file below
+
+`sudo nano /etc/default/sabnzbdplus`
+```
+# This file is sourced by /etc/init.d/sabnzbdplus
+#
+# When SABnzbd+ is started using the init script, the
+# --daemon option is always used, and the program is
+# started under the account of $USER, as set below.
+#
+# Each setting is marked either "required" or "optional";
+# leaving any required setting unconfigured will cause
+# the service to not start.
+
+# [required] user or uid of account to run the program as:
+USER=ddegagne
+
+# [optional] full path to the configuration file of your choice;
+#            otherwise, the default location (in $USER's home
+#            directory) is used:
+CONFIG=/home/ddegagne
+
+# [optional] hostname/ip and port number to listen on:
+HOST=192.168.1.108
+PORT=8080
+
+# [optional] extra command line options, if any:
+EXTRAOPTS=
+```
+
 Once configured correctly, you will be able to start and stop SABnzbd with the commands /etc/init.d/sabnzbdplus start and /etc/init.d/sabnzbdplus stop. On more recent Ubuntu versions, you can use
 
 `sudo service sabnzbdplus start`

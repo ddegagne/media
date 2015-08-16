@@ -54,19 +54,19 @@ http://localhost:8989
 
 In order for the program to run as a service, you will need to create a config file and save it in the /etc/init directory under nzbdrone.conf
 
->author "Deric Degagne"
->description "Upstart Script to run Sonarr as a service on Ubuntu/Debian based systems."
->
->#Set username for the process. Should probably be what you use for logging in
->setuid ddegagne
->
->env DIR=/opt/NzbDrone
->#This is the install directory. If you installed using a deb package or the Sonarr Repository you do not need to change >this
->
->setgid nogroup
->start on runlevel [2345]
->stop on runlevel [016]
->
->respawn
->
->exec mono --debug $DIR/NzbDrone.exe
+> author "Deric Degagne"
+> description "Upstart Script to run Sonarr as a service on Ubuntu/Debian based systems."
+> 
+> #Set username for the process. Should probably be what you use for logging in
+> setuid ddegagne
+> 
+> env DIR=/opt/NzbDrone
+> #This is the install directory. If you installed using a deb package or the Sonarr Repository you do not need to change this
+> 
+> setgid nogroup
+> start on runlevel [2345]
+> stop on runlevel [016]
+> 
+> respawn
+> 
+> exec mono --debug $DIR/NzbDrone.exe

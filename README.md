@@ -62,6 +62,8 @@ and
 
 `sudo service sabnzbdplus stop`
 
+Make sure that you create an account (http://wiki.sabnzbd.org/quick-setup -- top right)
+
 ## Sonarr PVR Install
 
 Add Sonarr's repository to your software source
